@@ -4,14 +4,14 @@ import base64
 
 st.title("PDF Viewer")
 
-pdf_file = 'autentista_champagne_list_2023.pdf'  # Replace 'your-pdf-file.pdf' with your PDF file's filename
+pdf_url = 'https://ff91246f2202a9db30c8da206882787645f5dcb4b1b66c53d76c56d-apidata.googleusercontent.com/download/storage/v1/b/test-public-1234567/o/autentista_champagne_list_2023.pdf?jk=AfSM9cCHI1iHYXb9OuQhuVeQUOUUvwWkBdjBQfN-pxaveJGBbEYrjNZbQo0BWDpSx-v48jilO_PAkCl1QkwBteoQF4sS5urkboCAew9j1fEWIybD0iGREN56ZEo2GKv1aQJh_Q7H24awm5mCeohAKYxou17GM3pLT6VxcrCaxl8nWO08ESnhKfW1RMhcIWyg_XL1izSIB-1GNVmngIQW71ECIMGOw18-6bmdT4w43cumV4X8BVeYwLqegKyKiqpyZvnK4RFsCSM_DiZRJctmrfHYdVLQTiXD3koO0l247P2ets-2_rT8VLB_z43FIqRqWfreTbwzou2EbhT7hlE6S8yK3jJjlhNNf9uAQ0CZHb2VWIqI2gHvISpFFte8XuE8Z1hOGisp5uEoeFqgVvgeuv8vw0v73FrDNJLpUp1cLU8idrUFAWzuLIdvDuTZF2QY9KHzIzwWI6_WGoTfk_QVTlk8RUNNiW8cDqlldyLfN8UJxB-YJQgvuaAvxBfSlmObKCUns6Em5wHKwY-3eaa2zU8e-dsI3_Zb0bfICTdK4EA_yr-_imdqPuiB1AwbpxTVvzeDEs8GkWzsOXek1VmcimSa0UaVcVBmC-xA2MO1exgdhLhIVTIw3wMe6k7C8kl1vyCV8Y_CFHyBR2qtdkYfOczGPa_fqIyJm2Ljqky6Z4P7xR1vieWyAXbTiyas2leL6raw4MZKsSbkTtF-9tIE834YDVPFw2ZKmvUR2br16YgHn3-koA-m7m08Q3gnjB1lIGlIGHV4Ekdw-yaL5olPTv-kkkp4ObhQ6d4ft8bdkFdzQZBCboxkvECFZVc65pjvMV10KDuALZGr1PAx4VsSUKV9Q4zOIAwBYExnXiCq0w6gUHe2wr7FPvw51NN4ppbkbmknLnfJbmekmJ6op2d7lDXt5UevCh3CFbyWKS8eXLMxANUwVTtweyt-tLtFNCAUEZxiTU-aecqfN9JkQxLR5QmRQPmxBsQpzrHy9am83Oor3_a401Nb_sX02sZYVLiac9ujXGw2PnHI4ls55lyE9Xxsnn1NEVqAUkYxUn1EbXOwSy2HlOHSEe72_3RUahzMITh1okgfD_873TrzELXwOwAkglZseIujt4-4qIDoOm4NeZLHRE9eryW7GCSolVKJ85CGnxW0b3_DQ1BsJ_JAa-PPdUjNGAOydvsYZh9GJVWmHoTma2UFNyg50XAA-Wz2CH4GwOKUnNNqYPLk1yapECidhbGjzsEB3Eo&isca=1'
 
 # Opening file from file path
-with open(pdf_file, "rb") as f:
-    base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+#with open(pdf_file, "rb") as f:
+#    base64_pdf = base64.b64encode(f.read()).decode('utf-8')
 
 # Embedding PDF in HTML
-pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf">'
+pdf_display = F'<iframe src="{pdf_url}" width="100%" height="600"></iframe>'
 
 # Displaying File
 st.markdown(pdf_display, unsafe_allow_html=True)
