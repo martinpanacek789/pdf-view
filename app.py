@@ -4,7 +4,7 @@ import base64
 
 st.title("PDF Viewer")
 
-pdf_file = '/Users/martinpanacek/pdf-view/autentista_champagne_list_2023.pdf'  # Replace 'your-pdf-file.pdf' with your PDF file's filename
+pdf_file = 'autentista_champagne_list_2023.pdf'  # Replace 'your-pdf-file.pdf' with your PDF file's filename
 
 # Opening file from file path
 with open(pdf_file, "rb") as f:
